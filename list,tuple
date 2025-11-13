@@ -1,0 +1,19 @@
+def linear_search(lst, target):
+    for i in range(len(lst)):
+        if lst[i] == target:
+            return i
+    return None
+
+# Get input from user
+numbers = input("Enter the list of numbers: ").split()
+numbers = [int(num) for num in numbers]  # Convert to integers
+target = int(input("The number to search for: "))
+
+# Perform search
+result = linear_search(numbers, target)
+
+# Display result
+if result is not None:
+    print(f"{target} was found at index {result}")
+else:
+    print(f"{target} was not found in the list")
